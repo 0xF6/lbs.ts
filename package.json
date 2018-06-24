@@ -1,0 +1,17 @@
+{
+  "name": "lbs.ts",
+  "version": "1.0.0",
+  "description": "Library for working with LBS towers for TypeScript",
+  "main": "./lib/index.js",
+  "repository": "https://github.com/0xF6/lbs.ts.git",
+  "author": "Yuuki Wesp <ls-micro@ya.ru>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "linqable.ts": "^1.7.6"
+  },
+  "devDependencies": {
+    "@types/node": "^10.3.5",
+    "typescript": "^2.9.2"
+  }
+}
