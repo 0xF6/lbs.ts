@@ -32,13 +32,13 @@ export class TowerInfo {
     public position: GeoPosition;
 
     public toString() {
-        return `${this.MCC}/${this.MNC}/${this.LAC}/${this.CID}/${this.RSSI}dBm`;
+        return `${this.MCC}/${this.MNC}/${this.LAC.toString(16).toUpperCase()}/${this.CID.toString(16).toUpperCase()}/${this.RSSI}dBm`;
     }
 
     public static parse(tower: string) {
         var splits = tower.split('/');
         if (splits.Count() != 5)
-            throw new InvalidDataError();
+            throw new InvalidDataError("Not correct LBS string, try [MCC/MNC/LAC/CID/RSSI]");
 
         let a = new TowerInfo();
         a.MCC = parseInt(splits[0]);
