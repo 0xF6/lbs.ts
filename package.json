@@ -1,6 +1,6 @@
 {
   "name": "lbs.ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Library for working with LBS towers for TypeScript",
   "main": "./lib/index.js",
   "repository": "https://github.com/0xF6/lbs.ts.git",
@@ -8,10 +8,57 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
-    "linqable.ts": "^1.7.6"
+    "geo-position.ts": "^1.3.2",
+    "linqable.ts": "^1.7.6",
+    "request": "^2.87.0",
+    "xml2js": "^0.4.19"
   },
   "devDependencies": {
     "@types/node": "^10.3.5",
+    "@types/request": "^2.47.1",
+    "ava": "^1.0.0-beta.6",
+    "ts-node": "^7.0.0",
     "typescript": "^2.9.2"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "ava test/**/*.test.ts --verbose",
+    "test-nya": "ava test/**/*.test.ts --tap | tap-nyan",
+    "report-test": "yarn nyc --reporter=lcov --reporter=text-lcov ava test/**/*.test.ts"
+  },
+  "keywords": [
+    "lbs",
+    "satellite",
+    "communication",
+    "mobile",
+    "network",
+    "parse",
+    "lbs-to-gps"
+  ],
+  "nyc": {
+    "extension": [
+      ".ts"
+    ],
+    "exclude": [
+      "**/*.d.ts",
+      "**/*.js",
+      "test"
+    ],
+    "reporter": [
+      "html",
+      "lcov",
+      "text"
+    ],
+    "all": true,
+    "cache": true
+  },
+  "ava": {
+    "compileEnhancements": false,
+    "extensions": [
+      "ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ]
   }
 }
