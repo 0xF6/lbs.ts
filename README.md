@@ -2,7 +2,7 @@
 Library for working with LBS 🌎 towers for TypeScript 🛰
 
 [![Build Status](https://travis-ci.org/0xF6/lbs.ts.svg?branch=master)](https://travis-ci.org/0xF6/lbs.ts)
-[![Dev Dependencies](https://img.shields.io/david/dev/0xF6/lbs.ts.svg)](https://david-dm.org/0xF6/lbs.ts?type=dev)
+[![Maintainability](https://api.codeclimate.com/v1/badges/797e9f03227c55229723/maintainability)](https://codeclimate.com/github/0xF6/lbs.ts/maintainability)
 [![Dependencies](https://img.shields.io/david/0xF6/lbs.ts.svg)](https://david-dm.org/0xF6/lbs.ts)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 [![codecov](https://codecov.io/gh/0xF6/lbs.ts/branch/master/graph/badge.svg)](https://codecov.io/gh/0xF6/lbs.ts)
