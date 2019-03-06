@@ -1,6 +1,6 @@
 {
   "name": "lbs.ts",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "Parse and convert LBS to GPS Library for TypeScript",
   "main": "./lib/index.js",
   "repository": "https://github.com/0xF6/lbs.ts.git",
