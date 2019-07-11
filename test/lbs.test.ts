@@ -5,7 +5,7 @@ import { GeoPosition } from "geo-position.ts";
 test("Getting from Yandex", async (t) => {
     t.plan(2);
     let result = await TowerInfo.GetTowerPositionFromYandex(TowerInfo.parse("250/1/19E/DC6/-76dBm"));
-    t.deepEqual(result, new GeoPosition(37.6929398, 55.814621))
+    t.deepEqual(result, new GeoPosition(37.6945305, 55.8146782))
     await t.throwsAsync(async () => {
         await TowerInfo.GetTowerPositionFromYandex(TowerInfo.parse("999/999/19E/DC6/-76dBm"));
     }, "Failed find this tower in yandex service.")
@@ -33,7 +33,7 @@ test("UpdatePosition", async (t) => {
     res.MNC = 1;
     res.RSSI = -76;
     await res.UpdatePosition();
-    t.deepEqual(res.position, new GeoPosition(37.6929398, 55.814621))
+    t.deepEqual(res.position, new GeoPosition(37.6945305, 55.8146782))
 });
 test("toString", async (t) => {
     let res = new TowerInfo();

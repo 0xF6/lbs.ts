@@ -1,5 +1,4 @@
 import { GeoPosition } from "geo-position.ts";
-import "linqable.ts";
 import { InvalidDataError, YandexRequestError } from "../error";
 import * as request from "request";
 import { parseString } from "xml2js";
@@ -37,7 +36,7 @@ export class TowerInfo {
 
     public static parse(tower: string) {
         var splits = tower.split('/');
-        if (splits.Count() != 5)
+        if (splits.length != 5)
             throw new InvalidDataError("Not correct LBS string, try [MCC/MNC/LAC/CID/RSSI]");
 
         let a = new TowerInfo();
@@ -114,8 +113,8 @@ export class TowerInfo {
         });
     }
 
-    private static RemoveExtraText(value: string) {
+    private static RemoveExtraText(value) {
         var allowedChars = "01234567890.".split('');
-        return (value.split('').Where(c => allowedChars.Contains(c)).ToArray().join(''));
+        return (value.split('').filter(c => allowedChars.includes(c))).join('');
     }
 }
